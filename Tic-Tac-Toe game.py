@@ -21,11 +21,12 @@ menu(l)
 while True:
   
     c1r=int(input("Player 1 - Please enter a row number: "))
-    c1c=int(input("Player 1 - Please enter a column number: "))
     if c1r>2:
         print("it cannot be higher than 2")
         continue
-    elif c1c>2:
+    
+    c1c=int(input("Player 1 - Please enter a column number: "))
+    if c1c>2:
         print("it cannot be higher than 2")
         continue
     
@@ -67,7 +68,9 @@ while True:
     elif l[0][0] + l[1][1] + l[2][2]=="OOO":
         print("player 1 wins")
         break
-
+    elif l[2][0] + l[1][1] + l[0][2]=="OOO":
+        print("player 1 wins")
+        break
     counter=0
     for c in range(0,3):
         for d in range(0,3):
@@ -125,6 +128,9 @@ while True:
     elif l[0][0] + l[1][1] + l[2][2]=="XXX":
         print("player 2 wins")
         break
+    elif l[2][0] + l[1][1] + l[0][2]=="XXX":
+        print("player 2 wins")
+        break
     counter2=0
     for c in range(0,3):
         for d in range(0,3):
@@ -133,3 +139,5 @@ while True:
     if counter2==9:
         print("The game finished draw")
         break
+    
+        
